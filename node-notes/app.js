@@ -1,14 +1,13 @@
-console.log("Iniziamo");
+console.log("Starting app.js");
 
 const fs = require('fs');
-const os = require('os');
+const _ = require('lodash');
 
-var user = os.userInfo();
-console.log(user);
+const notes = require('./notes.js')
 
 
-fs.appendFile('testo.txt','Hello ' + user.username,function(err)
-{
-    if (err)
-        console.log(err.message);
-})
+// fs.appendFile('testo.txt',`Hello ${user.username}! You are ${notes.age}.`,function(err)
+// {
+//     if (err)
+//         console.log(err.message);
+// })
